@@ -17,15 +17,37 @@
       font-size: 40px;
       font-weight: 700;
     }
+    .abs-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
 </head>
 
 <body class="img-fluid" alt="Responsive image" background="wallhaven-p81mje.png">
   <div class="container h-100">
-    <div class="col-lg-12 text-center">
-      <p class="pokedex">PokeDex</p>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <p class="pokedex">PokeDex</p>
+      </div>
+      <div class="col-lg-12" id="colPokemonAlert">
+        <div class="alert alert-danger" role="alert" id="alertPokemon" style="display:none;">
+        </div>
+        <div class="alert alert-success" role="alert" id="successPokemon" style="display:none;">
+        </div>
+      </div>
+      <div class="col-md-12 abs-center">
+        <div class="form-group">
+          <label>Escribe tu nombre Pokemon</label>
+          <input type="text" id="namePokemon" class="form-control text-center">
+        </div>
+      </div>
+      <div class="col-md-12 text-center pb-4">
+        <button class="btn btn-primary" onclick="searchPokemon();">Buscar Pokemon</button>
+      </div>
     </div>
-    <div class="row align-items-center h-100">
+    <div class="row align-items-center h-100" id="rowPokemon" style="display:none;">
       <div class="col-3 mx-auto">
         <div class="card">
           <img id="imagenpokemon" class="table table-dark" class="card-img-top" src='' alt="" Card image cap"">
